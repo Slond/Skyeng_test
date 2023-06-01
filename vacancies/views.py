@@ -3,7 +3,7 @@ from django.http import HttpResponseNotFound, HttpResponseServerError, Http404
 from django.shortcuts import render
 
 from vacancies.models import Specialty, Company, Vacancy
-
+# Отлично: Отличный порядок импортов, который полностью соответствует PEP8. Из мелочей, оптимальнее сортировать импорты в алфавитном порядке, это поможет быстрее ориентироваться в импортах, когда проекты станут сильно больше
 
 def main_view(request):
     specialties = Specialty.objects.annotate(num_vacancy=Count('vacancies')).all()

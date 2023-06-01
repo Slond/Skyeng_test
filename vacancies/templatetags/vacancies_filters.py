@@ -11,7 +11,7 @@ def vacancy_declension(num):
         return f'{num} вакансия'
     elif 1 < unit < 5 and tens != 1:
         return f'{num} вакансии'
-    else:
+    else: # Можно лучше: есть такая хорошая практика, как Guard Block. Ее суть в том, что крайний else часто можно не писать, так как выполнение функции в любом случае прервется, ведь в if (elif) есть return.
         return f'{num} вакансий'
 
 
